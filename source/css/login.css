@@ -2,27 +2,28 @@
     margin:0px;
     padding:0px;
     box-sizing: border-box;
+    font-family:'OpenSans',sans-serif;
 }
 body{
     background-color: rgb(243,243,243);
 }
-#block{
+#Shubham1{
     background-color: white;
     width:45%;
     margin:auto;
     padding:10%;
 }
-form>h1{
+#Shubham1>form>h1{
     text-align: center;
     font-size: 50px ;
     margin-bottom: 50px;
-    font-family:serif;
+}
+/* #Shubham1 form>label{
+    margin-top: 100px;
+    margin-bottom: 10px;
+} */
 
-}
-h1+label{
-  
-}
-input,button{
+#Shubham1 input{
     width:100%;
     height: 50px;
     font-size:20px;
@@ -30,28 +31,16 @@ input,button{
     margin-top:20px;
     padding:15px;
 }
-#card{
-   
-    display: flex;
-    justify-content: space-between;
-    width:100%;
-    height:20px;
-    margin: auto;
-    margin-top:20px;
-    
-}
-#card>label{
-    display: grid;
-    height: 20px;
-    
-}
-button{
+#Shubham1 p+input{
     background-color: black;
     color:white;
 }
-h4{
+
+#Shubham1 h4{
     text-align: center;
     margin-top:20px;
     font-size: 20px;
-    font-family: sans-serif;
+    
 }
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');

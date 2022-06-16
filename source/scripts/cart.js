@@ -81,3 +81,22 @@ let amountLS = JSON.parse(localStorage.getItem("amountOfItem")) || [];
     } 
    localStorage.setItem("quantityOfItem",JSON.stringify(itemsInCart)) 
  }
+ let imageNum=0;
+ movingBanner()
+ function movingBanner(){
+ let image=document.getElementsByClassName("banner");
+ for(let i=0;i<image.length;i++)
+ {
+  image[i].style.display="none"
+ }
+ imageNum++;
+ if(imageNum>image.length) 
+ {
+  imageNum = 1;
+ }
+image[imageNum-1].style.display = "block";
+setTimeout(movingBanner,3000)
+ }
+
+
+

@@ -94,6 +94,17 @@
   font-family: 'Cinzel', serif;
 }
 
+<<<<<<< HEAD
 #error {
   color: #ee3333;
+=======
+#footer{
+  height: 100px;
+}
+ion-icon{
+  /* border: 1px solid red; */
+  font-size: 30px;
+  margin-bottom: -10px;
+  padding-left: 10px;
+>>>>>>> e8ab1e2169baf34862d985aadf978a35988cc2dd
 }

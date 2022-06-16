@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +10,52 @@
   <script src="scripts/index.js"></script>
 
 </head>
+<style>
+  #banner {
+    width: 100%;
+    height: 70vh;
+    margin-top: 50px;
+  }
+
+  #banner>img {
+    width: 100%;
+
+  }
+
+  #banner>button {
+    background-color: rgba(128, 128, 128, .0);
+
+    border-radius: 100%;
+    color: grey;
+    font-size: 50px;
+    position: absolute;
+    border: 0px;
+    color: rgb(103, 101, 101);
+  }
+
+  #banner>button:hover {
+    color: white;
+  }
+
+  #inc {
+    top: 300px;
+    left: 35px;
+
+  }
+
+  #dec {
+    top: 300px;
+    right: 35px;
+  }
+</style>
+
 <body>
   <div id="navbar">
     <div>
       <div></div>
       <div>
-        <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243" alt="" id="logo">
+        <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243" alt=""
+          id="logo">
       </div>
       <div>
         <input type="text" id="searchQuery">
@@ -35,5 +76,50 @@
       <a href="">CLEARANCE</a>
     </div>
   </div>
+
+  <div id="banner">
+    <img src="" alt="">
+    <button id="inc"><</button>
+    <button id="dec">></button>
+  </div>
 </body>
+
 </html>
+<script>
+  let img = document.querySelector("#banner>img");
+  img.setAttribute('src', '../source/images/banner/6.jpg');
+  let btn1 = document.getElementById('inc');
+  let btn2 = document.getElementById('dec');
+  let imgnum = 0;
+  console.log(btn1,btn2);
+  let imgarr = [
+    '../source/images/banner/1.png',
+    '../source/images/banner/2.png',
+    '../source/images/banner/3.png',
+    '../source/images/banner/4.png',
+    '../source/images/banner/5.png',
+    '../source/images/banner/6.jpg'
+  ];
+
+
+  btn1.addEventListener('click',()=>{
+    console.log('right');
+    if (imgnum === 0) {
+      imgnum = imgarr.length - 1;
+      img.setAttribute('src', imgarr[imgnum]);
+    } else {
+      imgnum--;
+      img.setAttribute('src', imgarr[imgnum]);
+    }
+  });
+  btn2.addEventListener('click',()=>{
+    console.log('left');
+    if (imgnum === imgarr.length - 1) {
+      imgnum = 0;
+      img.setAttribute('src', imgarr[imgnum]);
+    } else {
+      imgnum++;
+      img.setAttribute('src', imgarr[imgnum]);
+    }
+  });
+</script>

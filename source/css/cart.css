@@ -7,10 +7,17 @@
   margin: auto;
   display: grid;
   gap: 20px;
+<<<<<<< HEAD
   /* width: auto; */
   height: 300px;
   grid-template-columns: repeat(3, 300px);
   /* grid-template-rows: auto; */
+=======
+  width: auto;
+  height: 200px;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: auto;
+>>>>>>> e1db7595f5d4449f1cf4136f99d52cc9dd4ded8d
   gap: 20px;
 }
 #cartBody>div {

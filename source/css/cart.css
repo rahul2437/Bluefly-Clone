@@ -1,26 +1,89 @@
 #cartBody {
-    margin: auto;
-    display: grid;
-    gap: 20px;
-    width: auto;
-    grid-template-columns: repeat(4, 250px);
-    grid-template-rows: auto;
-    gap: 20px;
-  }
-  #cartBody > div {
-    /* border: 2px solid red; */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
-  #cartBody > div > img {
-    margin: auto;
+  margin: auto;
+  display: grid;
+  gap: 20px;
+  width: auto;
+  height: 2000px;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: auto;
+  gap: 20px;
+}
+#cartBody > div {
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#cartBody > div > img {
+  margin: auto;
+  margin-bottom: -10px;
+  /* border: 2px solid red; */
+  width: 200px;
+  height: 200px;
+}
 
-    margin-bottom: -10px;
-    /* border: 2px solid red; */
-    width: 200px;
-    height: 200px;
-  }
+#cartHead {
+  /* border: 2px solid red; */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  font-size: 25px;
+  display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: space-between;
+}
+h1{
+  /* border: 2px solid red; */
+  padding-top: 15px;
+}
+#links {
+  /* border: 2px solid red; */
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  justify-content: flex-end;
+}
+#buy {
+  height: 35px;
+  width: 180px;
+  color: white;
+  background-color: #000;
+  border-radius: 10px;
+}
+#buy > a {
+  color: white;
+  font-size: 20px;
+}
+ion-icon {
+  /* border: 2px solid red; */
+  font-size: 30px;
+}
+#blueflyLogo {
+  margin: auto;
+  display: flex;
+  width: 600px;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid red; */
+  height: 80px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+#blackBar {
+  background-color: #000;
+  height: 10px;
+}
+.banner>img{
+  margin-top:7px;
+  /* border: 2px solid red; */
+  width: 450px;
+  height: 150px;
+}
  
   #cartHead {
     position:sticky;
@@ -30,22 +93,6 @@
     display: flex;
     padding-left: 50px;
     padding-right: 50px;
-    background-color: aqua;
     justify-content: space-between;
   }
 
-  #links {
-    font-size: 25px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 10px;
-    justify-content: flex-end;
-  }
-  #buy {
-    height: 30px;
-  }
-  #icon{
-    /* border: 2px solid red; */
-   font-size: 40px;
-  }

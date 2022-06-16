@@ -23,6 +23,9 @@
   }
  
   #cartHead {
+    position:sticky;
+    top:0;
+    background-color: white;
     font-size: 25px;
     display: flex;
     padding-left: 50px;

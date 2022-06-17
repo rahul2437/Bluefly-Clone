@@ -15,11 +15,12 @@ form.addEventListener("submit",(e)=>{
             password:password
         };
 
-        let UserDataArr =JSON.parse(localStorage.getItem("UserData"))||[];
+        let UserDataArr =JSON.parse(localStorage.getItem("userData"))||[];
         console.log(UserDataArr)
 
         let Already=UserDataArr.filter((e)=>{
         return e.email == UserInfo.email && e.password== UserInfo.password;
+        
     });
 
     if(Already.length!==0)

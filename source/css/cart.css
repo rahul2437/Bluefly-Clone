@@ -8,141 +8,108 @@
   padding: 0;
   font-family: 'Open Sans', sans-serif;
 }
-
-#cartMainBody{
-  display: flex;
-  
+#blueflyLogo{
+  text-align: center;
 }
-
-#cartBody {
- 
-  display: grid;
- width: 75%;
- margin-left: 20px;
- margin-right: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: auto; */
-  gap: 10px;
+#blackBar{
+  width: 100%;
+  height: 10px;
+background-color: #000;
+margin-bottom: 5px;
 }
-#cartBody > div {
+#cartHead{
   /* border: 2px solid; */
+  font-size: 25px;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-  text-align:center ;
-   border-radius: 10px;
-  padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-#cartBody > div > img {
- 
-  width: 250px;
-  height: 300px;
-}
-
-#totalAmount{
+  margin-left: 20px;
   margin-right: 20px;
-  /* border: 2px solid;  */
-  width: 300px;
-  height: 300px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-}
-#totalAmount>p{
-  display: flex;
-  margin-left: 40px;
-  font-size: 30px;
-  font-weight: bold;
-
-}
-#buy {
-  margin-top: 50px;
-  margin-left: 60px;
-  height: 35px;
-  width: 180px;
-  color: white;
-  background-color: #000;
-  border-radius: 10px;
-}
-
-
-#cartHead {
-  /* border: 2px solid red; */
-  position: sticky;
-  top: 0;
-  background-color: white;
-  font-size: 25px;
-  display: flex;
-  padding-left: 50px;
-  padding-right: 50px;
   justify-content: space-between;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-bottom: 20px;
 }
-h1{
-  /* border: 2px solid red; */
-  padding-top: 15px;
-}
-#links {
-  /* border: 2px solid red; */
-  font-size: 25px;
+#links{
+  /* border: 2px solid; */
+  width: 300px;
+  font-weight: bold;
   display: flex;
+  gap:20px;
   align-items: center;
-  gap: 20px;
-  padding: 10px;
-  justify-content: flex-end;
 }
-
-#buy > a {
-  color: white;
-  font-size: 20px;
-}
-ion-icon {
-  /* border: 2px solid red; */
-  font-size: 30px;
-}
-#blueflyLogo {
-  margin: auto;
-  display: flex;
-  width: 600px;
-  justify-content: center;
-  align-items: center;
-  /* border: 2px solid red; */
-  height: 80px;
-}
-
-a {
-  color: #000;
+a{
   text-decoration: none;
 }
-#blackBar {
-  background-color: #000;
-  height: 2px;
+#yourCart{
+ margin-left: 580px;
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid; */
+  text-align: center;
 }
-/* .banner>img{
-  margin-top:7px;
-   border: 2px solid red; 
-  width: 450px;
-  height: 150px;
-} */
- 
-  #cartHead {
-    position:sticky;
-    top:0;
-    background-color: white;
-    font-size: 25px;
-    display: flex;
-    padding-left: 50px;
-    padding-right: 50px;
+ion-icon{
+  font-size: 35px;
+}
+#empty{
+  text-align: center;
+  margin-top: 100px;
+}
+#cartMainBody{
+  display: flex;
+  text-align: center;
+    /* border: 2px solid; */
+    margin-left: 20px;
+    margin-right: 20px;
     justify-content: space-between;
-  }
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-bottom: 100px;
+}
+#cartBody{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  /* border: 2px solid; */
+}
+#cartBody>div{
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 340px;
+  padding: 20px;
+}
+#cartBody>div>img{
+  width:300px;
+  height: 350px;
+}
 
-  #links>a:after {
-    display:block;
-    content: '';
-    border-bottom: solid 3px #000;  
-    transform-origin:  0% 50%;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-  }
-  #links>a:hover:after { transform: scaleX(1); }
-  
+#delete{
+  margin-top: 8px;
+  background-color: #000;
+  color: white;
+  width: 80px;
+  height: 30px;
+  border-radius: 8px;
+}
+#totalAmount{
+  padding-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 300px;
+  height: 300px;
+  /* border: 2px solid; */
+}
+#buy{
+  width: 150px;
+  height: 40px;
+  margin-top: 80px;
+  border-radius: 10px;
+  background-color: #000;
+}
+#buy>a{
+  color:white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+

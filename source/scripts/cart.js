@@ -34,6 +34,7 @@ function displayCart(Incart) {
 
     let btn1 = document.createElement("button");
     btn1.innerText = "Delete";
+    btn1.setAttribute("id", "delete")
     btn1.style.cursor = "pointer"
 
     btn1.addEventListener("click", function () {
@@ -48,7 +49,7 @@ function displayCart(Incart) {
   document.querySelector("#amount").innerText = amountCart.toFixed(2);
   if(+quantityCart==0)
   {
-        document.querySelector("#empty").innerText="Do some shopping";
+        document.querySelector(".empty").innerText="Click Me to shop more!!";
     } 
 }
 displayCart(Incart);

@@ -1,25 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#cartMainBody{
+  display: flex;
+  
+}
+
 #cartBody {
-  margin: auto;
+ 
   display: grid;
-  gap: 20px;
-  width: auto;
-  height: 200px;
-  grid-template-columns: repeat(4, 250px);
-  grid-template-rows: auto;
-  gap: 20px;
+ width: 75%;
+ margin-left: 20px;
+ margin-right: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: auto; */
+  gap: 10px;
 }
 #cartBody > div {
-  border-radius: 10px;
+  /* border: 2px solid; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align:center ;
+   border-radius: 10px;
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #cartBody > div > img {
-  margin: auto;
-  margin-bottom: -10px;
-  /* border: 2px solid red; */
-  width: 200px;
-  height: 200px;
+ 
+  width: 250px;
+  height: 300px;
 }
+
+#totalAmount{
+  margin-right: 20px;
+  /* border: 2px solid;  */
+  width: 300px;
+  height: 300px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+#totalAmount>p{
+  display: flex;
+  margin-left: 40px;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+#buy {
+  margin-top: 50px;
+  margin-left: 60px;
+  height: 35px;
+  width: 180px;
+  color: white;
+  background-color: #000;
+  border-radius: 10px;
+}
+
 
 #cartHead {
   /* border: 2px solid red; */
@@ -45,13 +91,7 @@ h1{
   padding: 10px;
   justify-content: flex-end;
 }
-#buy {
-  height: 35px;
-  width: 180px;
-  color: white;
-  background-color: #000;
-  border-radius: 10px;
-}
+
 #buy > a {
   color: white;
   font-size: 20px;
@@ -76,14 +116,14 @@ a {
 }
 #blackBar {
   background-color: #000;
-  height: 10px;
+  height: 2px;
 }
-.banner>img{
+/* .banner>img{
   margin-top:7px;
-  /* border: 2px solid red; */
+   border: 2px solid red; 
   width: 450px;
   height: 150px;
-}
+} */
  
   #cartHead {
     position:sticky;
@@ -96,3 +136,13 @@ a {
     justify-content: space-between;
   }
 
+  #links>a:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #000;  
+    transform-origin:  0% 50%;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+  #links>a:hover:after { transform: scaleX(1); }
+  

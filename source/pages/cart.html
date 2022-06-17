@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/cart.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart</title>
+  <link rel="stylesheet" href="../css/cart.css" />
 </head>
+
 <body>
-    <div id="cartHead">
-        <h1>Your Cart</h1>
-        <div id="links">
-        <p><a href="product1.html">Home</a></p>
-        <p><a href="product1.html">Mens</a></p>
-        <p><a href="product1.html">Womens</a></p>
-            <p id="icon"><ion-icon name="bag-add-outline"></ion-icon></p>
-          <p id="cart">0</p>
-          <p >Amount</p><p id="amount">0</p>
-          <button id="buy"><a href="">BUY NOW</a></button>
-        </div>
-      </div>
-      <h1 id="empty"></h1>
-      <div id="cartBody">
-        
-      </div>
-      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <div id="blueflyLogo">
+    <a href="../index.html"><img
+        src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243"
+        alt="Bluefly" /></a>
+  </div>
+  <div id="blackBar"></div>
+  <div id="cartHead">
+    <h1>Your Cart</h1>
+    <div class="banner">
+      <img src="../images/banner/1.png" alt="">
+    </div>
+    <div class="banner">
+      <img src="../images/banner/2.png" alt="">
+    </div>
+    <div class="banner">
+      <img src="../images/banner/3.png" alt="">
+    </div>
+    <div class="banner">
+      <img src="../images/banner/4.png" alt="">
+    </div>
+
+    <div id="links">
+      <a href="../index.html">Home</a>
+      <a href="product1.html">Mens</a>
+      <a href="product1.html">Womens</a>
+      <ion-icon name="cart-outline"></ion-icon>
+      <p id="cart">0</p>
+      <p>Amount</p>
+      <p id="amount">0</p>
+      <button id="buy"><a href="Payment Page">Check Out</a></button>
+    </div>
+  </div>
+  <div id="blackBar"></div>
+  <h1 id="empty"></h1>
+  <div id="cartBody"></div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
 
-
-<script src="../scripts/cart.js">
-
-    let product={
-        image_url:
-        "https://content.shop4reebok.com/static/Product-EX4296/reebok_EX4296_1.jpg.plp",
-      name: "MEN'S REEBOK RUNNING ROADMAP SHOES",
-      price: 1170,
-      strikedoffprice: 2599,
-      cart : 0,
-    }
-</script>
+<script src="../scripts/cart.js"></script>

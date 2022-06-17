@@ -3,7 +3,6 @@ img.setAttribute('src', '../source/images/banner/6.jpg');
 let btn1 = document.getElementById('inc');
 let btn2 = document.getElementById('dec');
 let imgnum = 0;
-console.log(btn1,btn2);
 let imgarr = [
   '../source/images/banner/1.png',
   '../source/images/banner/2.png',
@@ -15,7 +14,6 @@ let imgarr = [
 
 
 btn1.addEventListener('click',()=>{
-  console.log('right');
   if (imgnum === 0) {
     imgnum = imgarr.length - 1;
     img.setAttribute('src', imgarr[imgnum]);
@@ -25,7 +23,6 @@ btn1.addEventListener('click',()=>{
   }
 });
 btn2.addEventListener('click',()=>{
-  console.log('left');
   if (imgnum === imgarr.length - 1) {
     imgnum = 0;
     img.setAttribute('src', imgarr[imgnum]);

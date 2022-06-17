@@ -55,56 +55,75 @@
   background-color: #000;
 }
 
-#body {
+#prodDisp {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 5fr;
+  max-width: 90%;
+  margin: auto;
+}
+
+#prodDisp>div:nth-child(1) {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  max-width: 70%;
 }
 
-#body>form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 350px;
+#prodDisp>div:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }
 
-#body>form>input {
-  padding: 5px 10px;
+#prodDisp>div:nth-child(2)>div>img {
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
 }
 
-#body>form>label {
-  margin-top: 20px;
-}
-
-#body>form>input:last-of-type {
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
-  font-size: 13px;
-}
-
-#body>form>input:last-of-type:hover {
-  opacity: 0.8;
-}
-
-#body>h1 {
-  text-transform: uppercase;
+#prodDisp>div:nth-child(2)>div {
+  box-shadow: #e3e3e3 0px 0px 8px 1px;
+  border-radius: 10px;
   padding: 20px;
-  font-size: 40px;
-  font-family: 'Cinzel', serif;
+  text-align: center;
 }
 
-<<<<<<< HEAD
-#error {
-  color: #ee3333;
-=======
-#footer{
-  height: 100px;
+#prodDisp>div:nth-child(2)>div>div {
+  display: flex;
+  justify-content: space-evenly;
 }
-ion-icon{
-  /* border: 1px solid red; */
-  font-size: 30px;
-  margin-bottom: -10px;
-  padding-left: 10px;
->>>>>>> e8ab1e2169baf34862d985aadf978a35988cc2dd
+
+#prodDisp>div:nth-child(2)>div>div>p:nth-child(1) {
+  text-decoration: line-through;
+}
+
+#prodDisp>div:nth-child(2)>div>div>p:nth-child(3) {
+  color: red;
+}
+
+.addToCart {
+  box-shadow: #e3e3e3 0px 0px 3px 1px;
+  text-align: center;
+  display: flex;
+  margin: 20px 0px;
+}
+
+.addToCart>div:nth-child(1) {
+  background-color: #ffc628;
+  width: 100%;
+}
+
+.addToCart>div:nth-child(2) {
+  width: 100%;
+}
+
+.addToCart>div:nth-child(3) {
+  width: 100%;
+  background-color: #ffc628;
+}
+.addToCart>div:nth-child(3):hover {
+  background-color: #bb8d0e;
+}
+.addToCart>div:nth-child(1):hover {
+  background-color: #bb8d0e;
 }

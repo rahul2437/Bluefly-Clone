@@ -34,7 +34,6 @@ btn2.addEventListener('click',()=>{
 
 
 // Shop by category start here
-console.log("Working");
 let categoryData = [
     {
       imge_url:

@@ -42,24 +42,29 @@
 }
 
 #totalAmount{
-  margin-right: 20px;
+  margin-right: 60px;
   /* border: 2px solid;  */
+  border-radius: 10px;
   width: 300px;
   height: 300px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 }
 #totalAmount>p{
-  display: flex;
-  margin-left: 40px;
+  /* border: 2px solid;  */
+  text-align: center;
   font-size: 30px;
   font-weight: bold;
-
+  
+}
+#totalAmount>p:first-child{
+  margin-top: 50px;
+  padding-bottom:20px;
 }
 #buy {
   margin-top: 50px;
   margin-left: 60px;
-  height: 35px;
+  height: 40px;
   width: 180px;
   color: white;
   background-color: #000;
@@ -81,6 +86,7 @@
 h1{
   /* border: 2px solid red; */
   padding-top: 15px;
+  text-align: center;
 }
 #links {
   /* border: 2px solid red; */
@@ -146,3 +152,7 @@ a {
   }
   #links>a:hover:after { transform: scaleX(1); }
   
+#emptyText{
+  margin-top: 20px;
+
+}

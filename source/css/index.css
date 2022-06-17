@@ -97,9 +97,10 @@ ion-icon{
 
 /* Footer Above section */
 #abovef{
+  margin: 20px;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(1,300px);
+  /* grid-template-rows: repeat(1,300px); */
   gap:25px;
   height: 500px;
 }
@@ -111,8 +112,10 @@ ion-icon{
 #abovef button{
   display: block;
   margin: auto;
-  background-color: white;
+  color: white;
+  background-color: #000;
   padding: 10px 20px;
+  border-radius: 10px;
   border: 1px solid lightgray;
   cursor: pointer;
 }
@@ -214,18 +217,19 @@ ion-icon{
 }
 
 
-#container3 {
+/* #container3 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 400px);
   gap: 40px;
-}
+} */
 
-#container3 div {
-  text-align: center;
-}
+#container3>div{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  }
 
-#container3 div img {
+/* #container3 div img {
   margin-top: 10px;
   width: 100%;
   height: 70%;
@@ -233,9 +237,9 @@ ion-icon{
 
   overflow: hidden;
 
-}
+} */
 
-#container3 div img:hover {
+/* #container3 div img:hover {
   transform: scale(1.02);
   z-index: 2;
 }
@@ -247,9 +251,9 @@ ion-icon{
 
 #container3>div>div {
   margin-top: 0px;
-}
+} */
 
-#container3 div p {
+/* #container3 div p {
   color: rgb(73, 65, 65);
   margin-top: 10px;
   line-height: 1.5;
@@ -274,14 +278,18 @@ ion-icon{
 
 #container3 div div :nth-child(1) {
   text-decoration: line-through;
-}
+} */
 
 
-.d3 {
-  /* border-top: 1px solid rgb(206, 197, 197); */
+/* .d3 {
+  // border-top: 1px solid rgb(206, 197, 197); 
   border-bottom: 1px solid rgb(206, 197, 197);
   text-align: center;
+  margin: 20px;
 
+}
+.trending{
+  margin-bottom: 30px;
 }
 
 .d3 input {
@@ -295,11 +303,12 @@ ion-icon{
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 20px 0;
-}
+} */
 /* Footer Start here  */
 
 /* Trending now start */
 #container3 {
+  margin: 20px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 400px);
@@ -309,6 +318,10 @@ ion-icon{
 #container3 div {
   text-align: center;
 }
+#container3>div{
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  border-radius: 10px;
+  }
 
 #container3 div img {
   margin-top: 10px;
@@ -388,7 +401,9 @@ ion-icon{
 }
 
 .text {
+  margin-top: 30px;
   text-align: center;
+  margin-bottom: -30px;
 }
 .text input {
   padding: 10px;
@@ -400,22 +415,33 @@ ion-icon{
 }
 
 #container2 {
+  /* border: 2px solid; */
+  
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 500px;
-  gap: 40px;
+  gap: 10px;
 }
 #container2 div {
+  /* border: 2px solid; */
+  margin: 20px;
   margin-top: 60px;
   cursor: pointer;
-
   text-align: center;
+  
 }
+#container2>div{
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 10px;
+}
+
 #container2 div img {
   width: 100%;
   height: 70%;
+  border-top-left-radius: 10px;
+  border-top-right-radius:10px ;
   transition: 0.5s;
-
+  /* border: 2px solid; */
   overflow: hidden;
 }
 #container2 div img:hover {
@@ -424,13 +450,14 @@ ion-icon{
 }
 #container2 div p {
   color: rgb(73, 65, 65);
-  margin-top: 10px;
+  margin-top: 5px;
   line-height: 1.5;
   font-family: sans-serif;
   font-size: 20px;
 }
 
 #container2 div div {
+  /* border: 2px solid; */
   margin-top: 0px;
 }
 
@@ -454,13 +481,13 @@ ion-icon{
   text-align: center;
 }
 
-
 /* new arrivals end  */
 /* shop by category start */
 h1 {
   text-align: center;
 }
 #container {
+  margin: 20px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 280px);
@@ -468,21 +495,23 @@ h1 {
 }
 #container div {
   cursor: pointer;
-
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+padding:10px;
+border-radius: 10px;
 }
 #container div p {
   text-align: center;
   margin-top: 5px;
   font-family: "Arial Narrow", Arial, sans-serif;
   font-size: 0.8em;
+  font-weight: 800;
   letter-spacing: 0.2em;
 }
 #container div img {
   width: 90%;
   height: 90%;
   transition: 0.5s;
-
   overflow: hidden;
 }
 #container div img:hover {

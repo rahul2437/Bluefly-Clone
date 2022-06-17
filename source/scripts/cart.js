@@ -1,10 +1,5 @@
-
-// Incart get product data form LS 
 let Incart = JSON.parse(localStorage.getItem("AddToCart")) || [];
-// quantityCart get quantity of items form LS
-// let quantityCart = JSON.parse(localStorage.getItem("quantityOfItem")) || [];
-// // amountLS get total amount form LS
-// let amountLS = JSON.parse(localStorage.getItem("amountOfItem")) || [];
+console.log(Incart);
 
 displayCart(Incart)
 //    body creation for the data added in cart from product pages
@@ -34,6 +29,7 @@ function displayCart(Incart) {
 
     let btn1 = document.createElement("button");
     btn1.innerText = "Delete";
+    btn1.setAttribute("id", "delete")
     btn1.style.cursor = "pointer"
 
     btn1.addEventListener("click", function () {
@@ -48,7 +44,7 @@ function displayCart(Incart) {
   document.querySelector("#amount").innerText = amountCart.toFixed(2);
   if(+quantityCart==0)
   {
-        document.querySelector("#empty").innerText="Do some shopping";
+        document.querySelector("#empty").innerText="Click here to shop more!!";
     } 
 }
 displayCart(Incart);

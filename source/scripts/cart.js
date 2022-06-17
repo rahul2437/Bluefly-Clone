@@ -1,18 +1,22 @@
 
 // Incart get product data form LS 
 let Incart = JSON.parse(localStorage.getItem("AddToCart")) || [];
-// itemsInCart get quantity of items form LS
-let itemsInCart = JSON.parse(localStorage.getItem("quantityOfItem")) || [];
-// amountLS get total amount form LS
-let amountLS = JSON.parse(localStorage.getItem("amountOfItem")) || [];
+// quantityCart get quantity of items form LS
+// let quantityCart = JSON.parse(localStorage.getItem("quantityOfItem")) || [];
+// // amountLS get total amount form LS
+// let amountLS = JSON.parse(localStorage.getItem("amountOfItem")) || [];
 
 displayCart(Incart)
 //    body creation for the data added in cart from product pages
 function displayCart(Incart) {
+  let quantityCart =0;
+   let amountCart = 0;
+  
   document.querySelector("#cartBody").innerHTML = "";
   Incart.forEach(function (elem, index) {
-    console.log(elem);
-
+    quantityCart += +elem.cart;
+     amountCart +=(+elem.actprice)*(+elem.cart) ;
+     
     let box = document.createElement("div");
 
     let image = document.createElement("img");
@@ -22,26 +26,30 @@ function displayCart(Incart) {
     pTag1.innerText = elem.name;
 
     let pTag2 = document.createElement("p");
-    pTag2.innerText = elem.actprice;
+    pTag2.innerText = "$"+elem.actprice;
 
     var qty = document.createElement("p")
     qty.setAttribute("id", "qty")
     qty.innerText = "Qty" + " " + elem.cart;
 
-    let btn2 = document.createElement("button");
-    btn2.innerText = "Delete";
-    btn2.style.cursor = "pointer"
+    let btn1 = document.createElement("button");
+    btn1.innerText = "Delete";
+    btn1.style.cursor = "pointer"
 
-    btn2.addEventListener("click", function () {
+    btn1.addEventListener("click", function () {
       DeletefromCart(elem, index);
     });
 
 
     document.querySelector("#cartBody").append(box);
-    box.append(image, pTag1, pTag2, qty, btn2);
+    box.append(image, pTag1, pTag2, qty, btn1);
   });
-  document.querySelector("#cart").innerText = itemsInCart;
-  document.querySelector("#amount").innerText = amountLS;
+  document.querySelector("#cart").innerText = quantityCart;
+  document.querySelector("#amount").innerText = amountCart.toFixed(2);
+  if(+quantityCart==0)
+  {
+        document.querySelector("#empty").innerText="Do some shopping";
+    } 
 }
 displayCart(Incart);
 
@@ -49,40 +57,27 @@ displayCart(Incart);
 // to delete the item from cart 
 // to subtract amount when item/product is deleted
 function DeletefromCart(elem, index) {
-  let sum = localStorage.getItem("amountOfItem")
-  sum = +sum
-
   if (elem.cart <= 1) {
-    sum = sum - elem.price
     Incart.splice(index, 1);
     localStorage.setItem("AddToCart", JSON.stringify(Incart));
-    amountLS = document.querySelector("#amount").innerText = sum;
-    localStorage.setItem("amountOfItem", sum)
     displayCart(Incart);
+    // console.log(amountLS)
   }
   else {
     elem.cart -= 1
-    sum = sum - elem.price
     localStorage.setItem("AddToCart", JSON.stringify(Incart));
-    // console.log(elem.cart)
-    amountLS = document.querySelector("#amount").innerText = sum;
-    localStorage.setItem("amountOfItem", sum)
     displayCart(Incart);
   }
-  removingItem(elem);
-  
+   removingItem(elem); 
  }
  // to decrease the  number of item ,displayed in cart, when item is deleted 
  function removingItem(elem)
  {
-   itemsInCart =document.querySelector("#cart").innerText=itemsInCart -1;
- if(+itemsInCart==0)
-  {
-        document.querySelector("#empty").innerText="Do some shopping";
-    } 
-   localStorage.setItem("quantityOfItem",JSON.stringify(itemsInCart)) 
+   quantityCart =document.querySelector("#cart").innerText
+   quantityCart--;
+  
+   localStorage.setItem("quantityOfItem",JSON.stringify(quantityCart)) 
  }
-
 
 
 

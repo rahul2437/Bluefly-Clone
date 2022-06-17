@@ -140,4 +140,3 @@ function createCards(ele,index) {
   prodGridCard.append(pimg, pbrand, pname, pricediv, btn);
   document.querySelector('#prodDisp>div:nth-child(2)').append(prodGridCard);
 }
-

@@ -1,11 +1,11 @@
 let loggedin = localStorage.getItem('loginData');
-if(loggedin==true){
-  document.getElementById('loginBtn').style.display = 'none';
-  document.getElementById('logoutBtn').style.display = 'block';
-}
-else{
-  document.getElementById('logoutBtn').style.display = 'none';
+if (loggedin) {
   document.getElementById('loginBtn').style.display = 'block';
+  document.getElementById('logoutBtn').style.display = 'none';
+}
+else {
+  document.getElementById('logoutBtn').style.display = 'block';
+  document.getElementById('loginBtn').style.display = 'none';
 }
 let form = document.querySelector('form');
 form.addEventListener('submit', (e) => {

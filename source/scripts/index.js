@@ -1,3 +1,15 @@
+let loggedin = localStorage.getItem('loginData');
+console.log(loggedin);
+if(loggedin){
+  document.getElementById('loginBtn').style.display = 'none';
+  document.getElementById('logoutBtn').style.display = 'block';
+}
+else{
+  document.getElementById('logoutBtn').style.display = 'none';
+  document.getElementById('loginBtn').style.display = 'block';
+}
+
+
 let img = document.querySelector("#banner>img");
 img.setAttribute('src', '../source/images/banner/6.jpg');
 let btn1 = document.getElementById('inc');

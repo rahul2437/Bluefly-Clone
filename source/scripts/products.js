@@ -1,3 +1,14 @@
+let loggedin = localStorage.getItem('loginData');
+if(loggedin){
+  document.getElementById('loginBtn').style.display = 'none';
+  document.getElementById('logoutBtn').style.display = 'block';
+}
+else{
+  document.getElementById('logoutBtn').style.display = 'none';
+  document.getElementById('loginBtn').style.display = 'block';
+}
+
+
 let dataArr = JSON.parse(localStorage.getItem('prodData'));
 let filterBy = document.querySelector('#genderFilter');
 let sortBy = document.querySelector('#priceFilter');

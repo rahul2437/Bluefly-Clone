@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,25 @@
   <title>SIGN UP</title>
   <link rel="stylesheet" href="../css/signup.css">
 </head>
+
 <body>
   <div id="navbar">
     <div>
       <div></div>
       <div>
-        <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243" alt="" id="logo">
+        <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243" alt=""
+          id="logo">
       </div>
       <div>
         <input type="text" id="searchQuery">
-        <a href="LoginPage.html"><ion-icon name="person-outline"></ion-icon></a>
-        <a href="cart.html"><ion-icon name="cart-outline"></ion-icon></a>
+        <a href="../pages/LoginPage.html">
+          <div id="loginBtn">Login</div>
+          <div id="logoutBtn">Logout</div>
+          </ion-icon>
+        </a>
+        <a href="cart.html">
+          <ion-icon name="cart-outline"></ion-icon>
+        </a>
       </div>
     </div>
     <div id="navitems">
@@ -56,8 +65,9 @@
 
   </div>
   <!-- script for ion-icon  -->
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
 <script src="../scripts/signup.js"></script>

@@ -16,9 +16,9 @@
 
 #Shubham1{
     background-color: white;
-    width:45%;
+    width:400px;
     margin:auto;
-    padding:10%;
+    padding:10px;
 }
 #Shubham1>form {
     display: flex;

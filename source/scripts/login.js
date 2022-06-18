@@ -1,9 +1,12 @@
 let form = document.querySelector("form");
-let loggedin = JSON.parse(localStorage.getItem("login")) || false;
-localStorage.setItem('login',loggedin);
-// console.log(loggedin);
-if (loggedin) {
-    alert("You are already logged in");
+let loggedin = localStorage.getItem('loginData');
+if(loggedin==true){
+  document.getElementById('loginBtn').style.display = 'none';
+  document.getElementById('logoutBtn').style.display = 'block';
+}
+else{
+  document.getElementById('logoutBtn').style.display = 'none';
+  document.getElementById('loginBtn').style.display = 'block';
 }
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -17,8 +20,6 @@ form.addEventListener("submit", (e) => {
         };
 
         let UserDataArr = JSON.parse(localStorage.getItem("userData")) || [];
-        console.log(UserDataArr);
-
         let Already = UserDataArr.filter((e) => {
             return e.email == UserInfo.email && e.password == UserInfo.password;
         });
@@ -26,12 +27,12 @@ form.addEventListener("submit", (e) => {
         if (Already.length !== 0) {
             window.location.href = '../index.html';
             loggedin = true;
-            localStorage.setItem('login',loggedin);
+            localStorage.setItem('loginData',loggedin);
         }
         else {
             error.innerText = "Email does not exists Or Wrong password!";
             loggedin = false;
-            localStorage.setItem('login',loggedin);
+            localStorage.setItem('loginData',loggedin);
         }
 
         clearForm();

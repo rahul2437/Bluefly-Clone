@@ -2,141 +2,150 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Home</title>
-   <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/index.css">
 
 </head>
 
 <body>
-   <div id="navbar">
-      <div>
-        <div></div>
+    <div id="navbar">
         <div>
-          <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243" alt="" id="logo">
+            <div></div>
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243"
+                    alt="" id="logo">
+            </div>
+            <div>
+                <input type="text" id="searchQuery">
+                <a href="pages/LoginPage.html">
+                    <div id="loginBtn">Login</div>
+                    <div id="logoutBtn">Logout</div>
+                    </ion-icon>
+                </a>
+                <a href="pages/cart.html">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </a>
+            </div>
         </div>
-        <div>
-          <input type="text" id="searchQuery">
-          <a href="pages/LoginPage.html"><ion-icon name="person-outline"></ion-icon></a>
-          <a href="pages/cart.html"><ion-icon name="cart-outline"></ion-icon></a>
+        <div id="navitems">
+            <a href="">SHOES</a>
+            <a href="">HANDBAGS & ACCESSORIES</a>
+            <a href="">DESIGNERS</a>
+            <a href="">WOMEN</a>
+            <a href="">MEN</a>
+            <a href="">SUNGLASSES</a>
+            <a href="">JEWELRY & WATCHES</a>
+            <a href="">UNDER $50</a>
+            <a href="">BEAUTY</a>
+            <a href="">CLEARANCE</a>
         </div>
-      </div>
-      <div id="navitems">
-        <a href="">SHOES</a>
-        <a href="">HANDBAGS & ACCESSORIES</a>
-        <a href="">DESIGNERS</a>
-        <a href="">WOMEN</a>
-        <a href="">MEN</a>
-        <a href="">SUNGLASSES</a>
-        <a href="">JEWELRY & WATCHES</a>
-        <a href="">UNDER $50</a>
-        <a href="">BEAUTY</a>
-        <a href="">CLEARANCE</a>
-      </div>
     </div>
     <div class="blackBar"></div>
-  <div id="banner">
-    <img src="" alt="">
-    <button id="inc"><</button>
-    <button id="dec">></button>
-  </div>
-  
-  
-   <!-- Shop by category start-->
-   <h1>SHOP BY CATEGORY</h1>
-   <div id="container"></div>
-   <!-- Shop by category end-->
+    <div id="banner">
+        <img src="" alt="">
+        <button id="inc">
+            << /button>
+                <button id="dec">></button>
+    </div>
 
 
-   <!-- New arrivals start here -->
-   <div class="d2">
-       <div class="text">
-           <h1>NEW ARRIVALS</h1>
-           <input type="button" value="VIEW   ALL" />
-       </div>
-       <div id="container2"></div>
-   </div>
-   <!-- New arrivals end here -->
-
-   <!-- Trending now strat here -->
-   <div class="d3">
-       <div class="trending">
-           <h1>TRENDING NOW</h1>
-       </div>
-
-       <div id="container3">
-           <!-- code appended here -->
-       </div>
-
-       <input type="button" value="VIEW ALL" />
-   </div>
-   <!-- Trending now stop here -->
-
-   <div id="border">
-       <div id="abovef"></div>
-
-       <!-- footer Section -->
-       <div id="footer">
-           <div id="fcontainer">
-               <div id="top-s">
-                   <div>
-                       <p>ABOUT US</p>
-                   </div>
-                   <div>
-                       <p>SIGN UP AND SAVE</p>
-                   </div>
-               </div>
+    <!-- Shop by category start-->
+    <h1>SHOP BY CATEGORY</h1>
+    <div id="container"></div>
+    <!-- Shop by category end-->
 
 
-               <div id="scontainer">
-                   <div class="links">
-                       <div><a href="">Contact Us</a></div>
-                       <div><a href="">Frequently Asked Questions</a></div>
-                       <div><a href="">Shipping & Returns</a></div>
-                       <div><a href="">Pre-Owned Guide</a></div>
-                   </div>
-                   <div class="links">
-                       <div><a href="">Sell on Bluefly</a></div>
-                       <div><a href="">Privacy Policy</a></div>
-                       <div><a href="">Terms & Conditions</a></div>
-                       <div><a href="">Do not sell my personal information</a></div>
-                   </div>
-                   <div class="last">
-                       <p>Subscribe to get exclusive offers on designer brands</p>
-                       <input type="text" name="mail" id="email" placeholder="Enter your email" required><br>
-                       <button onclick="subscribe()">Subscribe</button><br>
-                       <a href="https://www.instagram.com/bluefly/">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                       </a>
-                       <a href="https://www.facebook.com/Bluefly/">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                       </a>
-                   </div>
-               </div>
-
-               <div id="tcontainer">
-                   <div>
-                       <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/Untitled_2_.png_5_x104@2x.png?v=1620852820"
-                           alt="">
-                   </div>
-                   <div>
-                       <p>© 2022 Bluefly 1998-2020 BLUEFLY.COM OR ITS AFFILIATES ALL RIGHTS RESERVED.</p>
-                   </div>
-
-               </div>
-
-           </div>
-  
+    <!-- New arrivals start here -->
+    <div class="d2">
+        <div class="text">
+            <h1>NEW ARRIVALS</h1>
+            <input type="button" value="VIEW   ALL" />
         </div>
-     </div>
-  
-     <!-- Footer Section End -->
-</div>
-<!-- script for ion-icon  -->
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <div id="container2"></div>
+    </div>
+    <!-- New arrivals end here -->
+
+    <!-- Trending now strat here -->
+    <div class="d3">
+        <div class="trending">
+            <h1>TRENDING NOW</h1>
+        </div>
+
+        <div id="container3">
+            <!-- code appended here -->
+        </div>
+
+        <input type="button" value="VIEW ALL" />
+    </div>
+    <!-- Trending now stop here -->
+
+    <div id="border">
+        <div id="abovef"></div>
+
+        <!-- footer Section -->
+        <div id="footer">
+            <div id="fcontainer">
+                <div id="top-s">
+                    <div>
+                        <p>ABOUT US</p>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p>SIGN UP AND SAVE</p>
+                    </div>
+                </div>
+
+
+                <div id="scontainer">
+                    <div class="links">
+                        <div><a href="">Contact Us</a></div>
+                        <div><a href="">Frequently Asked Questions</a></div>
+                        <div><a href="">Shipping & Returns</a></div>
+                        <div><a href="">Pre-Owned Guide</a></div>
+                    </div>
+                    <div class="links">
+                        <div><a href="">Sell on Bluefly</a></div>
+                        <div><a href="">Privacy Policy</a></div>
+                        <div><a href="">Terms & Conditions</a></div>
+                        <div><a href="">Do not sell my personal information</a></div>
+                    </div>
+                    <div class="last">
+                        <p>Subscribe to get exclusive offers on designer brands</p>
+                        <input type="text" name="mail" id="email" placeholder="Enter your email" required><br>
+                        <button onclick="subscribe()">Subscribe</button><br>
+                        <a href="https://www.instagram.com/bluefly/">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                        <a href="https://www.facebook.com/Bluefly/">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="tcontainer">
+                    <div>
+                        <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/Untitled_2_.png_5_x104@2x.png?v=1620852820"
+                            alt="">
+                    </div>
+                    <div>
+                        <p>© 2022 Bluefly 1998-2020 BLUEFLY.COM OR ITS AFFILIATES ALL RIGHTS RESERVED.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Section End -->
+    </div>
+    <!-- script for ion-icon  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

@@ -26,10 +26,17 @@
   background-color: #000;
 }
 ion-icon{
- 
   font-size: 30px;
-  margin-bottom: -10px;
   padding-left: 10px;
+}
+#navbar>div:nth-of-type(1)>div:nth-child(3){
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#navbar>div:nth-of-type(1)>div:nth-child(3)>a{
+  display: flex;
+  gap: 10px;
 }
 #navbar>div:nth-of-type(2){
   display: flex;
@@ -100,7 +107,6 @@ ion-icon{
   margin: 20px;
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  /* grid-template-rows: repeat(1,300px); */
   gap:25px;
   height: 500px;
 }
@@ -130,31 +136,25 @@ ion-icon{
 #top-s {
   width: 100%;
   height: 60px;
-  /* border:1px solid red; */
   display: flex;
   font-size: 20px;
-}
-
-#top-s>div:nth-child(1) {
-  margin-right: 45%;
-
+  justify-content: space-evenly;
 }
 
 #footer.links {
   width: 25%;
   height: 200px;
-  /* border:1px solid green;  */
 
 }
 
 #footer .last {
   width: 30%;
   height: 200px;
-  /* border:1px solid green; */
 }
 
 #scontainer {
   display: flex;
+  justify-content: space-evenly;
 }
 
 #tcontainer {
@@ -162,7 +162,6 @@ ion-icon{
   ;
   width: 100%;
   height: 150px;
-  /* border:1px solid green; */
 }
 
 #scontainer .links>div>a {
@@ -216,97 +215,10 @@ ion-icon{
   margin-top: 5px;
 }
 
-
-/* #container3 {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 400px);
-  gap: 40px;
-} */
-
 #container3>div{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
   }
-
-/* #container3 div img {
-  margin-top: 10px;
-  width: 100%;
-  height: 70%;
-  transition: 0.5s;
-
-  overflow: hidden;
-
-} */
-
-/* #container3 div img:hover {
-  transform: scale(1.02);
-  z-index: 2;
-}
-
-#container3 :nth-child(3) img {
-  height: 50%;
-  margin-top: 90px;
-}
-
-#container3>div>div {
-  margin-top: 0px;
-} */
-
-/* #container3 div p {
-  color: rgb(73, 65, 65);
-  margin-top: 10px;
-  line-height: 1.5;
-  font-family: sans-serif;
-  font-size: 15px;
-  margin-bottom: 5px;
-}
-
-#container3 div div span {
-  margin: 2px;
-
-  font-size: 16px;
-  letter-spacing: 0.025em;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  text-rendering: optimizeSpeed;
-}
-
-#container3 div div :nth-child(3) {
-  color: red;
-}
-
-#container3 div div :nth-child(1) {
-  text-decoration: line-through;
-} */
-
-
-/* .d3 {
-  // border-top: 1px solid rgb(206, 197, 197); 
-  border-bottom: 1px solid rgb(206, 197, 197);
-  text-align: center;
-  margin: 20px;
-
-}
-.trending{
-  margin-bottom: 30px;
-}
-
-.d3 input {
-  padding: 10px;
-  width: 9%;
-  background-color: black;
-  color: white;
-  font-size: 15px;
-  font-weight: bolder;
-  border: 0.05px solid rgb(206, 197, 197);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin: 20px 0;
-} */
-/* Footer Start here  */
-
-/* Trending now start */
 #container3 {
   margin: 20px;
   display: grid;
@@ -319,7 +231,6 @@ ion-icon{
   text-align: center;
 }
 #container3>div{
-  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
   border-radius: 10px;
   }
 
@@ -376,7 +287,6 @@ ion-icon{
 
 
 .d3 {
-  /* border-top: 1px solid rgb(206, 197, 197); */
   border-bottom: 1px solid rgb(206, 197, 197);
   text-align: center;
 
@@ -394,8 +304,6 @@ ion-icon{
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 20px 0;
 }
- /* Trending now end */
- /* new Arrivals start*/
  body {
   font-weight: 400px;
 }
@@ -415,15 +323,12 @@ ion-icon{
 }
 
 #container2 {
-  /* border: 2px solid; */
-  
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 500px;
   gap: 10px;
 }
 #container2 div {
-  /* border: 2px solid; */
   margin: 20px;
   margin-top: 60px;
   cursor: pointer;
@@ -441,7 +346,6 @@ border-radius: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius:10px ;
   transition: 0.5s;
-  /* border: 2px solid; */
   overflow: hidden;
 }
 #container2 div img:hover {
@@ -457,7 +361,6 @@ border-radius: 10px;
 }
 
 #container2 div div {
-  /* border: 2px solid; */
   margin-top: 0px;
 }
 
@@ -481,8 +384,6 @@ border-radius: 10px;
   text-align: center;
 }
 
-/* new arrivals end  */
-/* shop by category start */
 h1 {
   text-align: center;
 }
@@ -526,4 +427,3 @@ border-radius: 10px;
   margin: 90px 0 60px 0;
   height: 35%;
 }
-/* shop by category end */

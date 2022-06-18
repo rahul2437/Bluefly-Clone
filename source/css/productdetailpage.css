@@ -25,9 +25,9 @@
     width:40%;
     padding:60px;
     }
-    #Shubham2>div:nth-child(2)>div:nth-child(1){
+    /* #Shubham2>div:nth-child(2)>div:nth-child(1){
       
-    }
+    } */
     #Shubham2>div:nth-child(2)>div:nth-child(1)>h2{
     font-family:Futura,sans-serif;
     font-size: 20px;

@@ -242,8 +242,8 @@ ion-icon {
 
 #container3 {
   display: grid;
-  margin: auto;
-  width: 90%;
+  margin: auto 20px;
+  /* width: 90%; */
   grid-template-columns: repeat(5,1fr);
   gap: 20px;
 }

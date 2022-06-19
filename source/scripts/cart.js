@@ -75,6 +75,7 @@ function removingItem(elem) {
 
 document.getElementById('buy').addEventListener('click',()=>{
   alert('Products have been ordered');
+  Incart = [];
+  localStorage.setItem('AddToCart',JSON.stringify(Incart));
   document.querySelector("#empty").innerText = "Click here to shop more!!";
-  localStorage.setItem('AddToCart',[]);
 });

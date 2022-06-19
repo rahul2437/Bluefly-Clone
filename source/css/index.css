@@ -2,36 +2,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
 }
-/* Footer Start here  */
-#navbar>div:nth-of-type(1){
-  /* border: 1px solid red; */
+
+.inactive{
+  display: none;
+}
+.active{
+  box-shadow: #d1d1d1 0px 0px 4px 1px;
+  padding:  3px 10px;
+}
+.active:hover{
+  background-color: #9b9b9b;
+}
+
+#navbar>div:nth-of-type(1) {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-#navbar input{
+
+#navbar input {
   font-size: 15px;
   padding: 3px 5px;
 }
-.blackBar{
+
+.blackBar {
   margin: 30px 0px;
   width: 100%;
   height: 30px;
   background-color: #000;
 }
-ion-icon{
- 
+
+ion-icon {
   font-size: 30px;
-  margin-bottom: -10px;
   padding-left: 10px;
 }
-#navbar>div:nth-of-type(2){
+
+#navbar>div:nth-of-type(1)>div:nth-child(3) {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#navbar>div:nth-of-type(1)>div:nth-child(3)>a {
+  display: flex;
+  gap: 10px;
+}
+
+#navbar>div:nth-of-type(2) {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -39,21 +62,25 @@ ion-icon{
   margin: auto;
   justify-content: center;
 }
-#navbar>div:nth-of-type(2)>a{
+
+#navbar>div:nth-of-type(2)>a {
   font-size: 17px;
   text-decoration: none;
   color: #000000;
 }
 
 #navbar>div:nth-of-type(2)>a:after {
-  display:block;
+  display: block;
   content: '';
-  border-bottom: solid 3px #000;  
-  transform-origin:  0% 50%;
+  border-bottom: solid 3px #000;
+  transform-origin: 0% 50%;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
-#navbar>div:nth-of-type(2)>a:hover:after { transform: scaleX(1); }
+
+#navbar>div:nth-of-type(2)>a:hover:after {
+  transform: scaleX(1);
+}
 
 /* NAVBAR CSS ENDS HERE */
 
@@ -84,34 +111,43 @@ ion-icon{
 }
 
 #inc {
-  top: 300px;
+  top: 370px;
   left: 35px;
-
 }
 
 #dec {
-  top: 300px;
+  top: 370px;
   right: 35px;
+}
+
+.Arrow{
+  color: #ffffff;
+  font-size: 50px;
+}
+.Arrow:hover{
+  transform: scale(1.2);
+  color: #a1a1a1;
 }
 
 
 /* Footer Above section */
-#abovef{
+#abovef {
   margin: 20px;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  /* grid-template-rows: repeat(1,300px); */
-  gap:25px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
   height: 500px;
 }
 
-#abovef img{
-  width:100%;
+#abovef img {
+  width: 100%;
   height: 300px;
 }
-#abovef button{
+
+#abovef button {
   display: block;
-  margin: auto;
+  width: 300px;
+  margin: 20px auto;
   color: white;
   background-color: #000;
   padding: 10px 20px;
@@ -119,6 +155,7 @@ ion-icon{
   border: 1px solid lightgray;
   cursor: pointer;
 }
+
 /* Footer Section end  */
 #fcontainer {
   width: 100%;
@@ -130,31 +167,25 @@ ion-icon{
 #top-s {
   width: 100%;
   height: 60px;
-  /* border:1px solid red; */
   display: flex;
   font-size: 20px;
-}
-
-#top-s>div:nth-child(1) {
-  margin-right: 45%;
-
+  justify-content: space-evenly;
 }
 
 #footer.links {
   width: 25%;
   height: 200px;
-  /* border:1px solid green;  */
 
 }
 
 #footer .last {
   width: 30%;
   height: 200px;
-  /* border:1px solid green; */
 }
 
 #scontainer {
   display: flex;
+  justify-content: space-evenly;
 }
 
 #tcontainer {
@@ -162,7 +193,6 @@ ion-icon{
   ;
   width: 100%;
   height: 150px;
-  /* border:1px solid green; */
 }
 
 #scontainer .links>div>a {
@@ -216,121 +246,35 @@ ion-icon{
   margin-top: 5px;
 }
 
-
-/* #container3 {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 400px);
-  gap: 40px;
-} */
-
-#container3>div{
+#container3>div {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
-  }
-
-/* #container3 div img {
-  margin-top: 10px;
-  width: 100%;
-  height: 70%;
-  transition: 0.5s;
-
-  overflow: hidden;
-
-} */
-
-/* #container3 div img:hover {
-  transform: scale(1.02);
-  z-index: 2;
 }
 
-#container3 :nth-child(3) img {
-  height: 50%;
-  margin-top: 90px;
-}
-
-#container3>div>div {
-  margin-top: 0px;
-} */
-
-/* #container3 div p {
-  color: rgb(73, 65, 65);
-  margin-top: 10px;
-  line-height: 1.5;
-  font-family: sans-serif;
-  font-size: 15px;
-  margin-bottom: 5px;
-}
-
-#container3 div div span {
-  margin: 2px;
-
-  font-size: 16px;
-  letter-spacing: 0.025em;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  text-rendering: optimizeSpeed;
-}
-
-#container3 div div :nth-child(3) {
-  color: red;
-}
-
-#container3 div div :nth-child(1) {
-  text-decoration: line-through;
-} */
-
-
-/* .d3 {
-  // border-top: 1px solid rgb(206, 197, 197); 
-  border-bottom: 1px solid rgb(206, 197, 197);
-  text-align: center;
-  margin: 20px;
-
-}
-.trending{
-  margin-bottom: 30px;
-}
-
-.d3 input {
-  padding: 10px;
-  width: 9%;
-  background-color: black;
-  color: white;
-  font-size: 15px;
-  font-weight: bolder;
-  border: 0.05px solid rgb(206, 197, 197);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin: 20px 0;
-} */
-/* Footer Start here  */
-
-/* Trending now start */
 #container3 {
-  margin: 20px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 400px);
-  gap: 40px;
+  margin: auto 20px;
+  /* width: 90%; */
+  grid-template-columns: repeat(5,1fr);
+  gap: 20px;
 }
 
 #container3 div {
   text-align: center;
 }
-#container3>div{
-  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+
+#container3>div {
+  padding: 10px;
   border-radius: 10px;
-  }
+}
+
 
 #container3 div img {
   margin-top: 10px;
   width: 100%;
   height: 70%;
   transition: 0.5s;
-
   overflow: hidden;
-
 }
 
 #container3 div img:hover {
@@ -351,7 +295,6 @@ ion-icon{
   color: rgb(73, 65, 65);
   margin-top: 10px;
   line-height: 1.5;
-  font-family: sans-serif;
   font-size: 15px;
   margin-bottom: 5px;
 }
@@ -376,7 +319,6 @@ ion-icon{
 
 
 .d3 {
-  /* border-top: 1px solid rgb(206, 197, 197); */
   border-bottom: 1px solid rgb(206, 197, 197);
   text-align: center;
 
@@ -390,13 +332,10 @@ ion-icon{
   font-size: 15px;
   font-weight: bolder;
   border: 0.05px solid rgb(206, 197, 197);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 20px 0;
 }
- /* Trending now end */
- /* new Arrivals start*/
- body {
+
+body {
   font-weight: 400px;
 }
 
@@ -405,59 +344,56 @@ ion-icon{
   text-align: center;
   margin-bottom: -30px;
 }
+
 .text input {
   padding: 10px;
   width: 9%;
   background-color: white;
   border: 0.05px solid rgb(206, 197, 197);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 #container2 {
-  /* border: 2px solid; */
-  
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 500px;
   gap: 10px;
 }
+
 #container2 div {
-  /* border: 2px solid; */
   margin: 20px;
   margin-top: 60px;
   cursor: pointer;
   text-align: center;
-  
+
 }
-#container2>div{
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-border-radius: 10px;
+
+#container2>div {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
 }
 
 #container2 div img {
   width: 100%;
   height: 70%;
   border-top-left-radius: 10px;
-  border-top-right-radius:10px ;
+  border-top-right-radius: 10px;
   transition: 0.5s;
-  /* border: 2px solid; */
   overflow: hidden;
 }
+
 #container2 div img:hover {
   transform: scale(1.02);
   z-index: 2;
 }
+
 #container2 div p {
   color: rgb(73, 65, 65);
   margin-top: 5px;
   line-height: 1.5;
-  font-family: sans-serif;
   font-size: 20px;
 }
 
 #container2 div div {
-  /* border: 2px solid; */
   margin-top: 0px;
 }
 
@@ -469,23 +405,25 @@ border-radius: 10px;
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeSpeed;
 }
+
 #container2 div div :nth-child(3) {
   color: red;
 }
+
 #container2 div div :nth-child(1) {
   text-decoration: line-through;
 }
+
 .d2 {
   border-top: 1px solid rgb(206, 197, 197);
   border-bottom: 1px solid rgb(206, 197, 197);
   text-align: center;
 }
 
-/* new arrivals end  */
-/* shop by category start */
 h1 {
   text-align: center;
 }
+
 #container {
   margin: 20px;
   display: grid;
@@ -493,37 +431,41 @@ h1 {
   grid-template-rows: repeat(2, 280px);
   gap: 20px;
 }
+
 #container div {
   cursor: pointer;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-padding:10px;
-border-radius: 10px;
+  padding: 10px;
+  border-radius: 10px;
 }
+
 #container div p {
   text-align: center;
   margin-top: 5px;
-  font-family: "Arial Narrow", Arial, sans-serif;
   font-size: 0.8em;
   font-weight: 800;
   letter-spacing: 0.2em;
 }
+
 #container div img {
   width: 90%;
   height: 90%;
   transition: 0.5s;
   overflow: hidden;
 }
+
 #container div img:hover {
   transform: scale(1.02);
   z-index: 2;
 }
+
 #container div img:hover {
   transform: scale(1.02);
   z-index: 2;
 }
+
 #container :nth-child(4) img {
   margin: 90px 0 60px 0;
   height: 35%;
 }
-/* shop by category end */

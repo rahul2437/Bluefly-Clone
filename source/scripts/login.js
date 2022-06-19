@@ -1,10 +1,24 @@
-let form = document.querySelector("form");
-let loggedin = JSON.parse(localStorage.getItem("login")) || false;
-localStorage.setItem('login',loggedin);
-// console.log(loggedin);
-if (loggedin) {
-    alert("You are already logged in");
+setTimeout(changeLogin, 100);
+function changeLogin(){
+  let loggedin = localStorage.getItem('loginData');
+  if (loggedin===true) {
+    document.getElementById('loginBtn').setAttribute('class','inactive');
+    document.getElementById('logoutBtn').setAttribute('class','active');
+  }
+  else {
+    document.getElementById('loginBtn').setAttribute('class','active');
+    document.getElementById('logoutBtn').setAttribute('class','inactive');
+  }
 }
+document.getElementById('logoutBtn').addEventListener('click',()=>{
+  localStorage.setItem('loginData',false);
+  changeLogin();
+});
+document.getElementById('loginBtn').addEventListener('click',()=>{
+  window.location.href = '../pages/LoginPage.html';
+});
+
+let form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     let error = document.getElementById("error");
@@ -17,8 +31,6 @@ form.addEventListener("submit", (e) => {
         };
 
         let UserDataArr = JSON.parse(localStorage.getItem("userData")) || [];
-        console.log(UserDataArr);
-
         let Already = UserDataArr.filter((e) => {
             return e.email == UserInfo.email && e.password == UserInfo.password;
         });
@@ -26,12 +38,12 @@ form.addEventListener("submit", (e) => {
         if (Already.length !== 0) {
             window.location.href = '../index.html';
             loggedin = true;
-            localStorage.setItem('login',loggedin);
+            localStorage.setItem('loginData', loggedin);
         }
         else {
             error.innerText = "Email does not exists Or Wrong password!";
             loggedin = false;
-            localStorage.setItem('login',loggedin);
+            localStorage.setItem('loginData', loggedin);
         }
 
         clearForm();

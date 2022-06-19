@@ -9,6 +9,17 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.inactive{
+  display: none;
+}
+.active{
+  box-shadow: #d1d1d1 0px 0px 4px 1px;
+  padding:  3px 10px;
+}
+.active:hover{
+  background-color: #9b9b9b;
+}
+
 #navbar>div:nth-of-type(1) {
   display: flex;
   justify-content: space-around;
@@ -46,6 +57,17 @@
 
 #navbar>div:nth-of-type(2)>a:hover:after {
   transform: scaleX(1);
+}
+
+#navbar>div:nth-of-type(1)>div:nth-child(3) {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#navbar>div:nth-of-type(1)>div:nth-child(3)>a {
+  display: flex;
+  gap: 10px;
 }
 
 .blackBar {
@@ -130,6 +152,5 @@
 ion-icon{
  
   font-size: 30px;
-  margin-bottom: -10px;
   padding-left: 10px;
 }

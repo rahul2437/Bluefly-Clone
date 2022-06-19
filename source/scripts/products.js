@@ -1,3 +1,24 @@
+setTimeout(changeLogin, 100);
+function changeLogin(){
+  let loggedin = localStorage.getItem('loginData');
+  if (loggedin===true) {
+    document.getElementById('loginBtn').setAttribute('class','inactive');
+    document.getElementById('logoutBtn').setAttribute('class','active');
+  }
+  else {
+    document.getElementById('loginBtn').setAttribute('class','active');
+    document.getElementById('logoutBtn').setAttribute('class','inactive');
+  }
+}
+document.getElementById('logoutBtn').addEventListener('click',()=>{
+  localStorage.setItem('loginData',false);
+  changeLogin();
+});
+document.getElementById('loginBtn').addEventListener('click',()=>{
+  window.location.href = '../pages/LoginPage.html';
+});
+
+
 let dataArr = JSON.parse(localStorage.getItem('prodData'));
 let filterBy = document.querySelector('#genderFilter');
 let sortBy = document.querySelector('#priceFilter');
@@ -44,12 +65,12 @@ filterBy.addEventListener('change', () => {
 });
 function showCards(arr) {
   document.querySelector('#prodDisp>div:nth-child(2)').innerHTML = '';
-  arr.forEach((e,index) => {
-    createCards(e,index);
+  arr.forEach((e, index) => {
+    createCards(e, index);
   });
 }
 
-function createCards(ele,index) {
+function createCards(ele, index) {
   let prodGridCard = document.createElement('div');
   let pimg = document.createElement('img');
   let pbrand = document.createElement('h4');
@@ -66,64 +87,64 @@ function createCards(ele,index) {
   let btndec = document.createElement('div');
   let btninc = document.createElement('div');
   let btndisp = document.createElement('div');
-  btn.setAttribute('id','cartValue');
+  btn.setAttribute('id', 'cartValue');
   btndec.innerText = '-';
   btninc.innerText = '+';
   btndisp.innerText = ele.cart;
-  btn.append(btndec,btndisp,btninc);
+  btn.append(btndec, btndisp, btninc);
   btn.setAttribute('class', 'addToCart');
-  
-  
-  
-  btninc.addEventListener('click', function(){
+
+
+
+  btninc.addEventListener('click', function () {
     let cart = JSON.parse(localStorage.getItem('AddToCart')) || [];
     let n = cart.length;
-    if(n==0){
+    if (n == 0) {
       ele.cart = 1;
       btndisp.innerText = ele.cart;
       cart.push(ele);
-      localStorage.setItem('AddToCart',JSON.stringify(cart));
+      localStorage.setItem('AddToCart', JSON.stringify(cart));
     }
-    else{
-      let present = cart.filter((e)=>{
+    else {
+      let present = cart.filter((e) => {
         return e.name == ele.name;
       });
-      if(present.length==0){
+      if (present.length == 0) {
         ele.cart = 1;
         btndisp.innerText = ele.cart;
         cart.push(ele);
-        localStorage.setItem('AddToCart',JSON.stringify(cart));
+        localStorage.setItem('AddToCart', JSON.stringify(cart));
       }
-      else{
+      else {
         cart.splice(index, 1);
         present[0].cart++;
         btndisp.innerText = present[0].cart;
         cart.push(present[0])
-        localStorage.setItem('AddToCart',JSON.stringify(cart));
+        localStorage.setItem('AddToCart', JSON.stringify(cart));
       }
     }
   });
-  btndec.addEventListener('click', function(){
+  btndec.addEventListener('click', function () {
     let cart = JSON.parse(localStorage.getItem('AddToCart')) || [];
     let n = cart.length;
-    if(n==0){
+    if (n == 0) {
       cart.push(ele);
-      localStorage.setItem('AddToCart',JSON.stringify(cart));
+      localStorage.setItem('AddToCart', JSON.stringify(cart));
     }
-    else{
-      let present = cart.filter((e)=>{
+    else {
+      let present = cart.filter((e) => {
         return e.name == ele.name;
       });
-      if(present.length==0){
+      if (present.length == 0) {
         cart.push(ele);
-        localStorage.setItem('AddToCart',JSON.stringify(cart));
+        localStorage.setItem('AddToCart', JSON.stringify(cart));
       }
-      else{
+      else {
         cart.splice(index, 1);
-        if(present[0].cart>0) present[0].cart--;
+        if (present[0].cart > 0) present[0].cart--;
         btndisp.innerText = present[0].cart;
         cart.push(present[0])
-        localStorage.setItem('AddToCart',JSON.stringify(cart));
+        localStorage.setItem('AddToCart', JSON.stringify(cart));
       }
     }
   });

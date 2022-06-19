@@ -1,17 +1,35 @@
+setTimeout(changeLogin, 100);
+function changeLogin(){
+  let loggedin = localStorage.getItem('loginData');
+  if (loggedin===true) {
+    document.getElementById('loginBtn').setAttribute('class','inactive');
+  }
+  else {
+    document.getElementById('logoutBtn').setAttribute('class','inactive');
+  }
+}
+document.getElementById('logoutBtn').addEventListener('click',()=>{
+  localStorage.setItem('loginData',false);
+  changeLogin();
+});
+document.getElementById('loginBtn').addEventListener('click',()=>{
+  window.location.href = '../pages/LoginPage.html';
+});
+
 let Incart = JSON.parse(localStorage.getItem("AddToCart")) || [];
 console.log(Incart);
 
 displayCart(Incart)
 //    body creation for the data added in cart from product pages
 function displayCart(Incart) {
-  let quantityCart =0;
-   let amountCart = 0;
-  
+  let quantityCart = 0;
+  let amountCart = 0;
+
   document.querySelector("#cartBody").innerHTML = "";
   Incart.forEach(function (elem, index) {
     quantityCart += +elem.cart;
-     amountCart +=(+elem.actprice)*(+elem.cart) ;
-     
+    amountCart += (+elem.actprice) * (+elem.cart);
+
     let box = document.createElement("div");
 
     let image = document.createElement("img");
@@ -21,7 +39,7 @@ function displayCart(Incart) {
     pTag1.innerText = elem.name;
 
     let pTag2 = document.createElement("p");
-    pTag2.innerText = "$"+elem.actprice;
+    pTag2.innerText = "$" + elem.actprice;
 
     var qty = document.createElement("p")
     qty.setAttribute("id", "qty")
@@ -42,10 +60,9 @@ function displayCart(Incart) {
   });
   document.querySelector("#cart").innerText = quantityCart;
   document.querySelector("#amount").innerText = amountCart.toFixed(2);
-  if(+quantityCart==0)
-  {
-        document.querySelector("#empty").innerText="Click here to shop more!!";
-    } 
+  if (+quantityCart == 0) {
+    document.querySelector("#empty").innerText = "Click here to shop more!!";
+  }
 }
 displayCart(Incart);
 
@@ -64,16 +81,15 @@ function DeletefromCart(elem, index) {
     localStorage.setItem("AddToCart", JSON.stringify(Incart));
     displayCart(Incart);
   }
-   removingItem(elem); 
- }
- // to decrease the  number of item ,displayed in cart, when item is deleted 
- function removingItem(elem)
- {
-   quantityCart =document.querySelector("#cart").innerText
-   quantityCart--;
-  
-   localStorage.setItem("quantityOfItem",JSON.stringify(quantityCart)) 
- }
+  removingItem(elem);
+}
+// to decrease the  number of item ,displayed in cart, when item is deleted 
+function removingItem(elem) {
+  quantityCart = document.querySelector("#cart").innerText
+  quantityCart--;
+
+  localStorage.setItem("quantityOfItem", JSON.stringify(quantityCart))
+}
 
 
 

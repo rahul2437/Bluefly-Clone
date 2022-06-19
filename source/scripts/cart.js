@@ -1,13 +1,3 @@
-setTimeout(changeLogin, 100);
-function changeLogin(){
-  let loggedin = localStorage.getItem('loginData');
-  if (loggedin===true) {
-    document.getElementById('loginBtn').setAttribute('class','inactive');
-  }
-  else {
-    document.getElementById('logoutBtn').setAttribute('class','inactive');
-  }
-}
 let Incart = JSON.parse(localStorage.getItem("AddToCart")) || [];
 console.log(Incart);
 

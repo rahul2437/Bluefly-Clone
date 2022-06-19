@@ -1,12 +1,23 @@
-let loggedin = localStorage.getItem('loginData');
-if (loggedin) {
-  document.getElementById('loginBtn').style.display = 'block';
-  document.getElementById('logoutBtn').style.display = 'none';
+setTimeout(changeLogin, 100);
+function changeLogin(){
+  let loggedin = localStorage.getItem('loginData');
+  if (loggedin===true) {
+    document.getElementById('loginBtn').setAttribute('class','inactive');
+    document.getElementById('logoutBtn').setAttribute('class','active');
+  }
+  else {
+    document.getElementById('loginBtn').setAttribute('class','active');
+    document.getElementById('logoutBtn').setAttribute('class','inactive');
+  }
 }
-else {
-  document.getElementById('logoutBtn').style.display = 'block';
-  document.getElementById('loginBtn').style.display = 'none';
-}
+document.getElementById('logoutBtn').addEventListener('click',()=>{
+  localStorage.setItem('loginData',false);
+  changeLogin();
+});
+document.getElementById('loginBtn').addEventListener('click',()=>{
+  window.location.href = '../pages/LoginPage.html';
+});
+
 let form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
     e.preventDefault();

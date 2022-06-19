@@ -1,21 +1,23 @@
+setTimeout(changeLogin, 100);
+function changeLogin(){
+  let loggedin = localStorage.getItem('loginData');
+  if (loggedin===true) {
+    document.getElementById('loginBtn').setAttribute('class','inactive');
+    document.getElementById('logoutBtn').setAttribute('class','active');
+  }
+  else {
+    document.getElementById('loginBtn').setAttribute('class','active');
+    document.getElementById('logoutBtn').setAttribute('class','inactive');
+  }
+}
 document.getElementById('logoutBtn').addEventListener('click',()=>{
-  console.log('logout');
   localStorage.setItem('loginData',false);
-  location.reload();
+  changeLogin();
 });
 document.getElementById('loginBtn').addEventListener('click',()=>{
   window.location.href = 'pages/LoginPage.html';
 });
 
-let loggedin = localStorage.getItem('loginData');
-if (loggedin) {
-  document.getElementById('loginBtn').style.display = 'none';
-  document.getElementById('logoutBtn').style.display = 'block';
-}
-else {
-  document.getElementById('logoutBtn').style.display = 'none';
-  document.getElementById('loginBtn').style.display = 'block';
-}
 let img = document.querySelector("#banner>img");
 img.setAttribute('src', '../source/images/banner/6.jpg');
 let btn1 = document.getElementById('inc');

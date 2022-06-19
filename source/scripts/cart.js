@@ -8,14 +8,6 @@ function changeLogin(){
     document.getElementById('logoutBtn').setAttribute('class','inactive');
   }
 }
-document.getElementById('logoutBtn').addEventListener('click',()=>{
-  localStorage.setItem('loginData',false);
-  changeLogin();
-});
-document.getElementById('loginBtn').addEventListener('click',()=>{
-  window.location.href = '../pages/LoginPage.html';
-});
-
 let Incart = JSON.parse(localStorage.getItem("AddToCart")) || [];
 console.log(Incart);
 

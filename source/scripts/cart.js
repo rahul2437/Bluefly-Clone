@@ -73,5 +73,7 @@ function removingItem(elem) {
   localStorage.setItem("quantityOfItem", JSON.stringify(quantityCart))
 }
 
-
-
+document.getElementById('buy').addEventListener('click',()=>{
+  alert('Products have been ordered');
+  localStorage.setItem('AddToCart',[]);
+});

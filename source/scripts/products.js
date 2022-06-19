@@ -1,4 +1,4 @@
-setTimeout(changeLogin, 100);
+changeLogin();
 function changeLogin(){
   let loggedin = localStorage.getItem('loginData');
   if (loggedin===true) {

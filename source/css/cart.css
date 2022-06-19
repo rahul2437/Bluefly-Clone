@@ -9,18 +9,8 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-.inactive{
-  display: none;
-}
-.active{
-  box-shadow: #d1d1d1 0px 0px 4px 1px;
-  padding:  3px 10px;
-}
-.active:hover{
-  background-color: #9b9b9b;
-}
-
-#cartMainBody{
+#blueflyLogo {
+  /* margin: auto; */
   display: flex;
   width: 100%;
   justify-content: center;
